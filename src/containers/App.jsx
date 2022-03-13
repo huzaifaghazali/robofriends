@@ -6,13 +6,6 @@ import './App.css'
  
 
 function App() {
-	// constructor(){
-	// 	super();
-	// 	this.state = {
-	// 		robots: [],
-	// 		searchfield: ''
-	// 	}
-	// }
 
 	const [robots, setRobots] = useState([]);
 	const [searchfield, setSearchfield] = useState('');
@@ -27,13 +20,6 @@ function App() {
 		setSearchfield(event.target.value)
 	}
 
-	// componentDidMount(){
-	// 	fetch("https://jsonplaceholder.typicode.com/users")
-	// 		.then(response => response.json())
-	// 		.then(users => this.setState({ robots: users}));
-	// }
-
-	
 	const filteredRobots = robots.filter(robot =>{
 		return robot.name.toLowerCase().includes(searchfield.toLowerCase())
 	})
